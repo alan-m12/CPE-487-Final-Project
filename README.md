@@ -7,5 +7,6 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Concepts Used
 
-- Finite State Machine
+- Finite State Machine: Both the bomb switch and the switches the players flip are fed into an FSM.
+  
 - 4-bit Counter
