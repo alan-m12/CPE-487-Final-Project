@@ -1,1 +1,3 @@
 # Switch Roulette
+
+This project features a game that is similar to the world-famous Russian Roulette, but with NEXYS A7 switches instead of gunshots. When the button to start the game is pressed, 15 of the 16 switches...
