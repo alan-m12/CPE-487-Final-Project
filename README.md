@@ -11,3 +11,6 @@ This project features a two-player game that is similar to the world-famous Russ
   
 - <ins>T Flip Flops</ins>: The counter.vhd file uses four T Flip Flops to generate a random four-bit number that will decide which of the 16 switches to make the bomb switch every round. Each T Flip Flop has three inputs (CLK, EN, and T) and one output (Q). Each of the outputs of the four different T Flip Flops corresponds to one of the bits in the random four-bit number, with T0 controlling the least significant bit and T3 controlling the most significant bit. 
 
+
+## Getting it Working
+
