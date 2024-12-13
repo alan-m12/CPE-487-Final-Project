@@ -1,6 +1,6 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity main is
    port(
@@ -11,48 +11,10 @@ entity main is
 end main;
 
 architecture Behavioral of main is
-
-signal R_N_D : natural;
-signal digit : std_logic_vector (3 downto 0);
-               
 begin
-   process (R_N) is
-   begin
-        if (R_N = "0000") then 
-            R_N_D <= 0;
-        elsif R_N <= "0001" then
-            R_N_D <= 1;
-        elsif R_N <= "0010" then
-            R_N_D <= 2;
-        elsif R_N <= "0011" then
-            R_N_D <= 3;
-        elsif R_N <= "0100" then
-            R_N_D <= 4;
-        elsif R_N <= "0101" then
-            R_N_D <= 5;
-        elsif R_N <= "0110" then
-            R_N_D <= 6;
-        elsif R_N <= "0111" then
-            R_N_D <= 7;
-        elsif R_N <= "1000" then
-            R_N_D <= 8;
-        elsif R_N <= "1001" then
-            R_N_D <= 9;
-        elsif R_N <= "1010" then
-            R_N_D <= 10;
-        elsif R_N <= "1011" then
-            R_N_D <= 11;
-        elsif R_N <= "1100" then
-            R_N_D <= 12;
-        elsif R_N <= "1101" then
-            R_N_D <= 13;
-        elsif R_N <= "1110" then
-            R_N_D <= 14;
-        elsif R_N <= "1111" then
-            R_N_D <= 15;
-        end if;
-   end process;
-
-X <= SWITCHES(R_N_D);
-
-end  Behavioral;
+    process(R_N, SWITCHES)
+    begin
+        -- Convert R_N to integer index, ensuring it's within switch vector range
+        X <= SWITCHES(to_integer(unsigned(R_N)));
+    end process;
+end Behavioral;
