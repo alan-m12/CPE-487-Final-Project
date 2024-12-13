@@ -26,5 +26,22 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Work Breakdown and Timeline
 
+### Responsibilities
 
+Alan Manjarrez: Most Programming, Hardware Integration
+Dylan Ramcharitar: Some Programming, README Documentation
+
+### Timeline
+
+<ins>12/7/24</ins>
+- Brainstormed project ideas
+- Conducted extensive research on idea
+- Found starter code
+- Assessed materials
+- Established GitHub Repository and updated README (Overview)
+
+
+<ins>12/13/24</ins>
+- Wrote and Formatted Code
+- Updated README (Concepts Used, Work Breakdown and Timeline)
 
