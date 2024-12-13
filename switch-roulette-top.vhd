@@ -19,13 +19,13 @@ architecture Behavioral of Roulette is
     
     component main is
      port ( CLK : in std_logic;
-            SWITCHES : in std_logic_vector(0 to 15);
+            SWITCHES : in std_logic_vector(15 to 0);
             R_N : in std_logic_vector(3 downto 0);
             X : out std_logic);
     end component;
     
     component my_fsm is
-        port ( SWITCHES : in std_logic_vector(0 to 15);
+        port ( SWITCHES : in std_logic_vector(15 to 0);
                X, CLK : in std_logic;
                Z : out std_logic);
     end component;
@@ -33,7 +33,7 @@ architecture Behavioral of Roulette is
     component BC_DEC is
         Port ( CLK,Z : in std_logic;   
                DISP_EN : out std_logic_vector(3 downto 0);
-               SEGMENTS : out std_logic_vector(0 to 7));
+               SEGMENTS : out std_logic_vector(7 to 0));
     end component;
                
 signal R_N : std_logic_vector(3 downto 0);
