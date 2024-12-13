@@ -28,8 +28,8 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ### Responsibilities
 
-Alan Manjarrez: Most Programming, Hardware Integration
-Dylan Ramcharitar: Some Programming, README Documentation
+- Alan Manjarrez: Most Programming, Hardware Integration
+- Dylan Ramcharitar: Some Programming, README Documentation
 
 ### Timeline
 
