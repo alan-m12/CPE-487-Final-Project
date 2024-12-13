@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity my_fsm is
 	port ( 
-        SWITCHES : in std_logic_vector(15 to 0);
+        SWITCHES : in std_logic_vector(15 downto 0);
         BTN0 : in std_logic;  -- Middle button to set bomb
 	    CLK : in std_logic;
 		Z : out std_logic;
