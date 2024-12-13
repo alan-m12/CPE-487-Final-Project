@@ -1,4 +1,3 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -10,23 +9,18 @@ entity tFlipFlop is
       Q : out std_logic
    );
 end entity tFlipFlop;
-
-
  
 architecture Behavioral of tFlipFlop is
-signal t_Q : std_logic := '0';
+    signal t_Q : std_logic := '0';
 begin
-   process (CLK) is
-   begin
-        if (EN = '1') then
-            if rising_edge(CLK) then
+    process (CLK) is
+    begin
+        if rising_edge(CLK) then
+            if EN = '1' then
                 t_Q <= T XOR t_Q;
             end if;
-        else
-            t_Q <= t_Q;
         end if;
-        
-   end process;
-   Q <= t_Q;
+    end process;
    
+    Q <= t_Q;
 end architecture Behavioral;
