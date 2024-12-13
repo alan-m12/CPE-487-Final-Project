@@ -1,29 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: Ratner Engineering
--- Engineer: bryan mealy
--- 
--- Create Date:    15:27:40 12/20/2010 
--- Design Name: 
--- Module Name:    BC_DEC
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: Special 7-segment display driver (4-letter words only)
---
---  One Input:  Z
---
---      Z = '1': LOSE
---      Z = '0': ---- 
---
--- Dependencies: 
---
--- Revision 0.01 - File Created
--- Additional Comments: 
---
---------------------------------------------------------------------------------
-
------------------------------------------------------------------------
------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
