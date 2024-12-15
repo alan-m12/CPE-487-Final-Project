@@ -25,7 +25,7 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Modifications
 
-
+- **Blank Display to Start**: dffdv
 
 ## Work Breakdown and Timeline
 
