@@ -74,6 +74,8 @@ This image shows the board when a player has flipped the bomb switch:
 ![Final Project Lose Display](https://github.com/user-attachments/assets/564c3c25-443c-47ed-9731-cf7fc379a0a0)
 
 This video shows that a new game cannot be started unless all switches are flipped to '0' and the button is pressed (our modification):
+https://github.com/user-attachments/assets/536edbbc-48b2-4180-84a0-73cd470e7dec
+
 
 
 
