@@ -55,7 +55,7 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Images and Videos
 
-![Final Project Blank Display](https://github.com/user-attachments/assets/b0256e60-ddd2-4374-9522-27cbc46bf67c =250x250)
+![Final Project Blank Display](https://github.com/user-attachments/assets/b0256e60-ddd2-4374-9522-27cbc46bf67c | width = 100)
 
 
 
