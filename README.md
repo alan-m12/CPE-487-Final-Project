@@ -55,6 +55,9 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Images and Videos
 
+![Final Project Blank Display](https://github.com/user-attachments/assets/b0256e60-ddd2-4374-9522-27cbc46bf67c)
+
+
 
 ## Modifications
 
@@ -81,6 +84,12 @@ This project features a two-player game that is similar to the world-famous Russ
 
 
 <ins>12/13/24</ins>
-- Wrote and Formatted Code
+- Formatted started code to work on NEXYS A7
 - Updated README (Concepts Used, Work Breakdown and Timeline)
+
+
+<ins>12/15/24</ins>
+- Finalized formatting and added our modifications to code
+- Updated README (Getting it Working, Inputs and Outputs, Modifications, Work Breakdown and Timeline)
+- Created presentation
 
