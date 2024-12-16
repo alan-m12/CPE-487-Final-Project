@@ -1,14 +1,15 @@
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity counter is
-   port(
-      CLK : in std_logic;
-      EN : in std_logic;
-      R_N : out std_logic_vector(3 downto 0)
-   );
+    port(
+        CLK : in std_logic;
+        EN : in std_logic;
+        R_N : out std_logic_vector(3 downto 0)
+    );
 end counter;
- 
+
 architecture Behavioral of counter is
     component tFlipFlop is
         Port ( 
@@ -19,6 +20,7 @@ architecture Behavioral of counter is
                
     signal Q0, Q1, Q2, Q3 : std_logic;
     signal f, g : std_logic;
+
 begin 
     T0 : tFlipFlop port map(
         CLK => CLK,
@@ -53,5 +55,6 @@ begin
     );
       
     R_N <= Q3 & Q2 & Q1 & Q0;
- 
+
 end Behavioral;
+
