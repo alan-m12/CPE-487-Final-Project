@@ -5,9 +5,10 @@ use IEEE.NUMERIC_STD.ALL;
 entity main is
    port(
       CLK : in std_logic;
-      SWITCHES : in std_logic_vector(0 to 15);
+      SWITCHES : in std_logic_vector(15 downto 0);
       R_N : in std_logic_vector(3 downto 0);
-      X : out std_logic);
+      X : out std_logic
+   );
 end main;
 
 architecture Behavioral of main is
