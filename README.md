@@ -25,7 +25,6 @@ This project features a two-player game that is similar to the world-famous Russ
 - EN
 - SWITCHES
 - BTN0
-- R_N
 - SW
 - T
 
@@ -36,10 +35,8 @@ This project features a two-player game that is similar to the world-famous Russ
 - DISP_EN
 - SEGMENTS
 - SCLK
-- R_N
 - X
 - CURRENT_PLAYER
-- AN
 - Q
 
 ### Our Additions
