@@ -47,7 +47,7 @@ This project features a two-player game that is similar to the world-famous Russ
 ### Our Additions
 
 <ins>Inputs</ins>
-- 
+- xxxxxxx
 
 <ins>Outputs</ins>
 - 'START': A state of the FSM where the seven-segment display is blank
