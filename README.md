@@ -25,8 +25,8 @@ This project features a two-player game that is similar to the world-famous Russ
 - EN
 - SWITCHES
 - BTN0
+- BTNU
 - SW
-- T
 
 ### Outputs
 
@@ -35,14 +35,13 @@ This project features a two-player game that is similar to the world-famous Russ
 - DISP_EN
 - SEGMENTS
 - SCLK
-- X
+- AN
 - CURRENT_PLAYER
-- Q
 
 ### Our Additions
 
 <ins>Inputs</ins>
-- xxxxxxx
+- 'BTNU': Initiates the 'hard' mode
 
 <ins>Outputs</ins>
 - 'START': A state of the FSM where the seven-segment display is blank
