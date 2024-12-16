@@ -59,6 +59,8 @@ This project features a two-player game that is similar to the world-famous Russ
 
 - <ins>All Switches to '0' to Play Again</ins>: Originally, after the bomb switch was found, the button could be clicked again to reassign a random bomb switch to any of the remaining unflipped switches. This would lead to new rounds being played without all 16 of the switches being used, which is not what we intended. To solve this issue, we implemented an 'if' statement that made sure that, when in state B, all of the switches were flipped back to '0' before the button could pressed to start a new game.
 
+- <ins>Hard Mode</ins>: Originally, there was only one way to play the game, which was whoever flipped the singular bomb switch would lose. We have implemented a second mode, that we refer to as "hard mode", that is activated by pressing the top button (BTNU) rather than the middle button (BTNC). In this mode, there are 3 bomb switches instead of 1, which increases the chances of a player losing on their turn.
+
 
 ## Images and Videos
 
@@ -89,7 +91,7 @@ https://github.com/user-attachments/assets/536edbbc-48b2-4180-84a0-73cd470e7dec
 
 ### Timeline
 
-<ins>12/7/24</ins>
+<ins>11/30/24</ins>
 - Brainstormed project ideas
 - Conducted extensive research on idea
 - Found starter code
@@ -97,12 +99,12 @@ https://github.com/user-attachments/assets/536edbbc-48b2-4180-84a0-73cd470e7dec
 - Established GitHub Repository and updated README (Overview)
 
 
-<ins>12/13/24</ins>
+<ins>12/8/24 to 12/14/24</ins>
 - Formatted started code to work on NEXYS A7
 - Updated README (Concepts Used, Work Breakdown and Timeline)
 
 
-<ins>12/15/24</ins>
+<ins>12/15/24 to 12/16/24</ins>
 - Finalized formatting and added our modifications to code
 - Updated README (Getting it Working, Inputs and Outputs, Modifications, Work Breakdown and Timeline)
 - Created presentation
