@@ -19,6 +19,39 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Inputs and Outputs
 
+### Inputs
+
+- CLK
+- Z
+- START
+- EN
+- SWITCHES
+- BTN0
+- R_N
+- SW
+- T
+
+### Outputs
+
+- START
+- BOMB_LOCATION
+- DISP_EN
+- SEGMENTS
+- SCLK
+- R_N
+- X
+- CURRENT_PLAYER
+- AN
+- Q
+
+### Our Additions
+
+<ins>Inputs</ins>
+- 
+
+<ins>Outputs</ins>
+- 'START': A state of the FSM where the seven-segment display is blank
+
 
 ## Images and Videos
 
