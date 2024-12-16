@@ -53,17 +53,29 @@ This project features a two-player game that is similar to the world-famous Russ
 - 'START': A state of the FSM where the seven-segment display is blank
 
 
-## Images and Videos
-
-![Final Project Blank Display](https://github.com/user-attachments/assets/b0256e60-ddd2-4374-9522-27cbc46bf67c | width = 100)
-
-
-
 ## Modifications
 
 - <ins>Blank Display to Start</ins>: Originally, when the Vivado code was first uploaded to the NEXYS board, the display would already show "PLAY" even though a game had not been started. This would lead to confusion because players would start to flip switches, not knowing that a bomb switch had not been assigned yet. To solve this issue, we modified the code to make the seven-segment display blank upon uploading fresh code. This way, players will know a game would not start unless they push the button.
 
 - <ins>All Switches to '0' to Play Again</ins>: Originally, after the bomb switch was found, the button could be clicked again to reassign a random bomb switch to any of the remaining unflipped switches. This would lead to new rounds being played without all 16 of the switches being used, which is not what we intended. To solve this issue, we implemented an 'if' statement that made sure that, when in state B, all of the switches were flipped back to '0' before the button could pressed to start a new game.
+
+
+## Images and Videos
+
+This image shows the board in its initial 'START' state, when the display is blank:
+![Final Project Blank Display](https://github.com/user-attachments/assets/b0256e60-ddd2-4374-9522-27cbc46bf67c)
+
+
+This image shows the board when a game is in progress:
+![Final Project Play Display](https://github.com/user-attachments/assets/72108314-9643-4efd-a18b-7141cb05bde4)
+
+
+This image shows the board when a player has flipped the bomb switch:
+![Final Project Lose Display](https://github.com/user-attachments/assets/564c3c25-443c-47ed-9731-cf7fc379a0a0)
+
+This video shows that a new game cannot be started unless all switches are flipped to '0' and the button is pressed (our modification):
+
+
 
 
 ## Work Breakdown and Timeline
