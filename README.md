@@ -162,12 +162,12 @@ https://github.com/user-attachments/assets/536edbbc-48b2-4180-84a0-73cd470e7dec
 
 
 <ins>12/8/24 to 12/14/24</ins>
-- Formatted started code to work on NEXYS A7
+- Formatted starter code to work on NEXYS A7 and first couple modifications implemented
 - Updated README (Concepts Used, Work Breakdown and Timeline)
 
 
 <ins>12/15/24 to 12/16/24</ins>
-- Finalized formatting and added our modifications to code
+- Finalized formatting and added our other modifications to code
 - Updated README (Getting it Working, Inputs and Outputs, Modifications, Work Breakdown and Timeline)
 - Created presentation
 
