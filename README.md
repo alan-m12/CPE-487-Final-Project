@@ -67,6 +67,8 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 - <ins>LED Indicators</ins>: To create a bit offeed backforboth modes, we made it so LEDs R11 and N15 flash green when a safe switch is flipped and red when a bomb switch is flipped respectively and blinks red rapidly when the Lose state is entered until a game reset occurs.
 
 <ins>Multi Bomb mode demo</ins>
+
+
 https://github.com/user-attachments/assets/6ff0c5b4-377d-461f-8d55-38662a485430
 
 
