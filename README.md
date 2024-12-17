@@ -17,9 +17,10 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Getting it Working
 
--To begin the project we found some starter code from the following site: https://www.instructables.com/Minesweeper/. It was the basic roullete game that randomly set a bomb and had the Play/Loase States. 
+-To begin the project we found some starter code from the following site: https://www.instructables.com/Minesweeper/. It was the basic roullete game that randomly set a bomb and had the Play/Lose States. 
 -The first first thing that was done from there was transforming the code and introducing a constraint file thatwould work for the NEXYS A7 board 
 
+-In order to run this program, you must download the 4 source files above(roulette.vhd, BC_DEC.vhd, clk_div.vhd, my_fsm.vhd) then add them as sources in a new Vivado project. Then download the contraint file (roulette.xdc) and move it into that same project as a constraint file. Then run synthesis and implementation and then generate the bitstream and hit program device.
 
 ## Inputs and Outputs
 
@@ -55,7 +56,7 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Modifications
 
-- <ins>Formating</ins>: The bigesst modification between the starter code and our code now is the consolidation of the jobs from other files into my_fsm
+- <ins>Formating</ins>: The bigesst modification between the starter code and our code now is the consolidation of the jobs from other files into my_fsm.vhd specifically the random generation being a LFSR
 
 - <ins>Blank Display to Start</ins>: Originally, when the Vivado code was first uploaded to the NEXYS board, the display would already show "PLAY" even though a game had not been started. This would lead to confusion because players would start to flip switches, not knowing that a bomb switch had not been assigned yet. To solve this issue, we modified the code to make the seven-segment display blank upon uploading fresh code. This way, players will know a game would not start unless they push the button.
 
@@ -63,7 +64,12 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 - <ins>Multi Bomb</ins>: Originally, there was only one way to play the game, which was whoever flipped the singular bomb switch would lose. We have implemented a second mode, that we refer to as "Multi-Bomb", that is activated by pressing the top button (BTNU) rather than the middle button (BTNC). In this mode, there are 3 bomb switches instead of 1, which also only causes a player to lose if they hit 2 out of 3 of the bomb switches.
 
-- <insLED Indicators</ins>:
+- <insLED Indicators</ins>: To create a bit offeed backforboth modes, we made it so LEDs R11 and N15 flash green when a safe switch is flipped and red when a bomb switch is flipped respectively and blinks red rapidly when the Lose state is entered until a game reset occurs.
+
+
+https://github.com/user-attachments/assets/6ff0c5b4-377d-461f-8d55-38662a485430
+
+
 ## Images and Videos
 
 This image shows the board in its initial 'START' state, when the display is blank:
