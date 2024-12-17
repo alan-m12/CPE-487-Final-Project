@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ### Roulette.vhd (Top Level)
   
-INPUTS:
+- INPUTS:
 
 CLK100MHZ - Main system clock operating at 100MHz
 
@@ -36,7 +36,7 @@ BTN0      - Button to start/reset single-player mode
 
 BTNU      - Button to start/reset multiplayer mode
 
-OUTPUTS:
+- OUTPUTS:
 
 SEGMENTS[7:0] - Controls the segments of each digit display (a-g + decimal point)
 
@@ -46,7 +46,7 @@ LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
 ### my_fsm.vhd (Game Controller)
   
-INPUTS:
+- INPUTS:
 
 SWITCHES[15:0] - Input from board switches for gameplay
 
@@ -54,7 +54,7 @@ BTN0, BTNU     - Input buttons for mode selection/reset
 
 CLK            - System clock input
 
-OUTPUTS:
+- OUTPUTS:
 
 Z              - Indicates game over state (0=playing, 1=game over)
 
@@ -68,7 +68,7 @@ LED_STATE      - Controls LED display patterns (01=safe, 10=bomb hit)
 
 ### BC_DEC.vhd (Display Controller)
   
-INPUTS:
+- INPUTS:
 
 CLK     - System clock input for timing
 
@@ -76,7 +76,7 @@ Z       - Game over state indicator from FSM
 
 START   - Game start state indicator from FSM
 
-OUTPUTS:
+- OUTPUTS:
 
 DISP_EN[7:0]   - Controls which display digits are active 
 
@@ -84,11 +84,11 @@ SEGMENTS[7:0]   - Controlls segment patterns for displaying "PLAY" or "LOSE"
 
 ### clk_div.vhd (Clock Divider)
   
-INPUTS:
+- INPUTS:
 
 clk     - Input clock that needs to be divided
 
-OUTPUTS:
+- OUTPUTS:
 
 sclk    - Slowed clock output for display refresh timing
 
