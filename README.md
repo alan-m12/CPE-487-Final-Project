@@ -42,6 +42,7 @@ AN[7:0]       - Controls which digit position is active (digit select)
 LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
 - my_fsm.vhd (Game Controller)
+  
 INPUTS:
 SWITCHES[15:0] - Input from board switches for gameplay
 BTN0, BTNU     - Input buttons for mode selection/reset
@@ -55,20 +56,29 @@ CURRENT_PLAYER - Tracks current player's turn (0=player1, 1=player2)
 LED_STATE      - Controls LED display patterns (01=safe, 10=bomb hit)
 
 - BC_DEC.vhd (Display Controller)
+  
 INPUTS:
+
 CLK     - System clock input for timing
+
 Z       - Game over state indicator from FSM
+
 START   - Game start state indicator from FSM
 
 OUTPUTS:
+
 DISP_EN[7:0]   - Controls which display digits are active (digit multiplexing)
+
 SEGMENTS[7:0]   - Controls segment patterns for displaying "PLAY" or "LOSE"
 
 - clk_div.vhd (Clock Divider)
+  
 INPUTS:
+
 clk     - Input clock that needs to be divided
 
 OUTPUTS:
+
 sclk    - Slowed clock output for display refresh timing
 
 ### Our Additions
