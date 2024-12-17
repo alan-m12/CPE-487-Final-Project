@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Inputs and Outputs
 
-- Roulette.vhd (Top Level)
+### Roulette.vhd (Top Level)
   
 INPUTS:
 
@@ -44,7 +44,7 @@ AN[7:0]       - Controls which digit position is active (digit select)
 
 LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
-- my_fsm.vhd (Game Controller)
+### my_fsm.vhd (Game Controller)
   
 INPUTS:
 
@@ -66,7 +66,7 @@ CURRENT_PLAYER - Tracks current player's turn (0=player1, 1=player2)
 
 LED_STATE      - Controls LED display patterns (01=safe, 10=bomb hit)
 
-- BC_DEC.vhd (Display Controller)
+### BC_DEC.vhd (Display Controller)
   
 INPUTS:
 
@@ -82,7 +82,7 @@ DISP_EN[7:0]   - Controls which display digits are active
 
 SEGMENTS[7:0]   - Controlls segment patterns for displaying "PLAY" or "LOSE"
 
-- clk_div.vhd (Clock Divider)
+### clk_div.vhd (Clock Divider)
   
 INPUTS:
 
