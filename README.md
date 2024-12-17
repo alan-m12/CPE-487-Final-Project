@@ -42,20 +42,21 @@ Used with all switches down to reset game
 Starts multi-bomb mode
 Used with all switches down to reset game
 
--Switches (SW[15:0]):
-16 switches that players flip during gameplay
-Each switch can potentially hide a bomb
-Must all be down (0) to reset game
-
-
+Switches (SW[15:0]):
+-16 switches that players flip during gameplay
+-Each switch can potentially hide a bomb
+-Must all be flipped down to reset game
 
 OUTPUTS:
 
 -LED[1:0] (2 LEDs):
 
 "00": Default/Off state
-"01": Green - Safe move made
+
+"01": Green - Safe move 
+
 "10": Red - Bomb hit
+
 Flashing "10": Game Over
 
 
