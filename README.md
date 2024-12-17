@@ -5,6 +5,11 @@
 This project features a two-player game that is similar to the world-famous Russian Roulette, but with NEXYS A7 switches instead of gunshots. When the button to start the game is pressed, 1 of the 16 switches on the NEXYS A7 Board, at random, will trigger a bomb when flipped! The other 15 are deemed "safe". Players take turns flipping one switch at a time, and the player who flips the bomb switch loses. Good luck!
 
 
+
+https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
+
+
+
 ## Concepts Used
 
 - <ins>Finite State Machine</ins>: Both the bomb switch and the switches the players flip are fed into an FSM. The FSM has two different states that we call state A and state B. In state A, the seven-segment display on the NEXYS A7 Board displays the word "PLAY" to indicate that the game is in progress. Once the bomb switch is flipped, state B will be entered, where the seven-segment display will display the word "LOSE" to indicate that the player who flipped the last switch (bomb switch) has the lost the game. The FSM will stay in state B until all of the 16 switches are flipped back to "off" and the button is pressed. When that happens, it returns to state A and awaits a new game to be started.
@@ -12,7 +17,8 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Getting it Working
 
-
+-To begin the project we found some starter code from the following site: https://www.instructables.com/Minesweeper/. It was the basic roullete game that randomly set a bomb and had the Play/Loase States. 
+-The first first thing that was done from there was transforming the code and introducing a constraint file thatwould work for the NEXYS A7 board 
 
 
 ## Inputs and Outputs
@@ -49,13 +55,15 @@ This project features a two-player game that is similar to the world-famous Russ
 
 ## Modifications
 
+- <ins>Formating</ins>: The bigesst modification between the starter code and our code now is the consolidation of the jobs from other files into my_fsm
+
 - <ins>Blank Display to Start</ins>: Originally, when the Vivado code was first uploaded to the NEXYS board, the display would already show "PLAY" even though a game had not been started. This would lead to confusion because players would start to flip switches, not knowing that a bomb switch had not been assigned yet. To solve this issue, we modified the code to make the seven-segment display blank upon uploading fresh code. This way, players will know a game would not start unless they push the button.
 
 - <ins>All Switches to '0' to Play Again</ins>: Originally, after the bomb switch was found, the button could be clicked again to reassign a random bomb switch to any of the remaining unflipped switches. This would lead to new rounds being played without all 16 of the switches being used, which is not what we intended. To solve this issue, we implemented an 'if' statement that made sure that, when in state B, all of the switches were flipped back to '0' before the button could pressed to start a new game.
 
-- <ins>Hard Mode</ins>: Originally, there was only one way to play the game, which was whoever flipped the singular bomb switch would lose. We have implemented a second mode, that we refer to as "hard mode", that is activated by pressing the top button (BTNU) rather than the middle button (BTNC). In this mode, there are 3 bomb switches instead of 1, which increases the chances of a player losing on their turn.
+- <ins>Multi Bomb</ins>: Originally, there was only one way to play the game, which was whoever flipped the singular bomb switch would lose. We have implemented a second mode, that we refer to as "Multi-Bomb", that is activated by pressing the top button (BTNU) rather than the middle button (BTNC). In this mode, there are 3 bomb switches instead of 1, which also only causes a player to lose if they hit 2 out of 3 of the bomb switches.
 
-
+- <insLED Indicators</ins>:
 ## Images and Videos
 
 This image shows the board in its initial 'START' state, when the display is blank:
