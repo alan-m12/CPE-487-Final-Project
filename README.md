@@ -37,22 +37,33 @@ BTN0      - Button to start/reset single-player mode
 BTNU      - Button to start/reset multiplayer mode
 
 OUTPUTS:
+
 SEGMENTS[7:0] - Controls the segments of each digit display (a-g + decimal point)
+
 AN[7:0]       - Controls which digit position is active (digit select)
+
 LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
 - my_fsm.vhd (Game Controller)
   
 INPUTS:
+
 SWITCHES[15:0] - Input from board switches for gameplay
+
 BTN0, BTNU     - Input buttons for mode selection/reset
+
 CLK            - System clock input
 
 OUTPUTS:
+
 Z              - Indicates game over state (0=playing, 1=game over)
+
 START          - Indicates game start state (1=start screen)
+
 BOMB_LOCATION  - Current bomb position for single player mode
+
 CURRENT_PLAYER - Tracks current player's turn (0=player1, 1=player2)
+
 LED_STATE      - Controls LED display patterns (01=safe, 10=bomb hit)
 
 - BC_DEC.vhd (Display Controller)
@@ -67,9 +78,9 @@ START   - Game start state indicator from FSM
 
 OUTPUTS:
 
-DISP_EN[7:0]   - Controls which display digits are active (digit multiplexing)
+DISP_EN[7:0]   - Controls which display digits are active 
 
-SEGMENTS[7:0]   - Controls segment patterns for displaying "PLAY" or "LOSE"
+SEGMENTS[7:0]   - Controlls segment patterns for displaying "PLAY" or "LOSE"
 
 - clk_div.vhd (Clock Divider)
   
