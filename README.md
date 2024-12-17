@@ -24,26 +24,50 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Inputs and Outputs
 
-### Inputs
+INPUTS:
 
-- CLK
-- Z
-- START
-- EN
-- SWITCHES
-- BTN0
-- BTNU
-- SW
+- CLK100MHZ
+System clock (100 MHz)
+Used for timing and synchronization
 
-### Outputs
 
-- START
-- BOMB_LOCATION
-- DISP_EN
-- SEGMENTS
-- SCLK
-- AN
-- CURRENT_PLAYER
+Button Inputs:
+
+-BTN0:
+Starts single-bomb mode
+Used with all switches down to reset game
+
+
+-BTNU:
+Starts multi-bomb mode
+Used with all switches down to reset game
+
+-Switches (SW[15:0]):
+16 switches that players flip during gameplay
+Each switch can potentially hide a bomb
+Must all be down (0) to reset game
+
+
+
+OUTPUTS:
+
+-LED[1:0] (2 LEDs):
+
+"00": Default/Off state
+"01": Green - Safe move made
+"10": Red - Bomb hit
+Flashing "10": Game Over
+
+
+Seven-Segment Display:
+
+-SEGMENTS[7:0]: Controls individual segments
+-AN[7:0]: Controls which digit is active
+Displays:
+
+-"PLAY" during active game
+-"LOSE" when game is over
+Blank during startup/reset
 
 ### Our Additions
 
