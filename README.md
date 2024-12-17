@@ -21,10 +21,11 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Getting it Working
 
--To begin the project we found some starter code from the following site: https://www.instructables.com/Minesweeper/. It was the basic roullete game that randomly set a bomb and had the Play/Lose States. 
--The first first thing that was done from there was transforming the code and introducing a constraint file thatwould work for the NEXYS A7 board 
+- To begin the project we found some starter code from the following site: https://www.instructables.com/Minesweeper/. It was the basic roullete game that randomly set a bomb and had the Play/Lose States.
 
--In order to run this program, you must download the 4 source files above(roulette.vhd, BC_DEC.vhd, clk_div.vhd, my_fsm.vhd) then add them as sources in a new Vivado project. Then download the contraint file (roulette.xdc) and move it into that same project as a constraint file. Then run synthesis and implementation and then generate the bitstream and hit program device.
+- The first first thing that was done from there was transforming the code and introducing a constraint file that would work for the NEXYS A7 board.
+  
+- In order to run this program, you must download the 4 source files above(roulette.vhd, BC_DEC.vhd, clk_div.vhd, my_fsm.vhd) then add them as sources in a new Vivado project. Then download the contraint file (roulette.xdc) and move it into that same project as a constraint file. Then run synthesis and implementation and then generate the bitstream and hit program device.
 
 ## Inputs and Outputs
 
