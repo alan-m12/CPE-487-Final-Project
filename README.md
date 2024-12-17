@@ -28,9 +28,9 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
   
 - INPUTS:
 
-CLK100MHZ - Main system clock operating at 100MHz
+CLK100MHZ - Main system clock 
 
-SW[15:0]  - Array of 16 switches players use to make moves
+SW[15:0]  - 16 switches players use to make moves
 
 BTN0      - Button to start/reset single-player mode 
 
@@ -38,9 +38,9 @@ BTNU      - Button to start/reset multiplayer mode
 
 - OUTPUTS:
 
-SEGMENTS[7:0] - Controls the segments of each digit display (a-g + decimal point)
+SEGMENTS[7:0] - Controls the segments of each digit display 
 
-AN[7:0]       - Controls which digit position is active (digit select)
+AN[7:0]       - Controls which digit position is active 
 
 LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
@@ -58,9 +58,9 @@ CLK            - System clock input
 
 Z              - Indicates game over state (0=playing, 1=game over)
 
-START          - Indicates game start state (1=start screen)
+START          - Indicates game start state (1=start state)
 
-BOMB_LOCATION  - Current bomb position for single player mode
+BOMB_LOCATION  -  bomb position for single player mode 
 
 CURRENT_PLAYER - Tracks current player's turn (0=player1, 1=player2)
 
