@@ -25,10 +25,15 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 ## Inputs and Outputs
 
 - Roulette.vhd (Top Level)
+  
 INPUTS:
+
 CLK100MHZ - Main system clock operating at 100MHz
+
 SW[15:0]  - Array of 16 switches players use to make moves
+
 BTN0      - Button to start/reset single-player mode 
+
 BTNU      - Button to start/reset multiplayer mode
 
 OUTPUTS:
