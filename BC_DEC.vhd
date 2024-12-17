@@ -20,8 +20,8 @@ architecture BC_DEC of BC_DEC is
         );
     end component;
    
-    signal cnt_dig : std_logic_vector(1 downto 0); 
-    signal digit : std_logic_vector(3 downto 0); 
+    signal cnt_dig : std_logic_vector(1 downto 0) := "00"; 
+    signal digit : std_logic_vector(3 downto 0) := "0000"; 
     signal sclk : std_logic; 
 
 begin
@@ -38,8 +38,7 @@ begin
         end if; 
     end process; 
 
-    -- Modified to handle blank display during startup
-    SEGMENTS <= "11111111" when START = '1' else  -- All segments off during startup
+    SEGMENTS <= "11111111" when START = '1' else  -- Blank
                 "11100011" when digit = "0000" and Z = '1' else  -- L
                 "00000011" when digit = "0001" and Z = '1' else  -- O
                 "01001001" when digit = "0010" and Z = '1' else  -- S
@@ -48,10 +47,9 @@ begin
                 "11100011" when digit = "0101" and Z = '0' else  -- L
                 "00010001" when digit = "0110" and Z = '0' else  -- A
                 "10001001" when digit = "0111" and Z = '0' else  -- Y
-                "11111111";                                      -- Blank
+                "11111111";                                      
 
-    -- Actuate the correct display
-    disp_en <= "11111110" when cnt_dig = "00" else 
+    DISP_EN <= "11111110" when cnt_dig = "00" else 
                "11111101" when cnt_dig = "01" else
                "11111011" when cnt_dig = "10" else
                "11110111" when cnt_dig = "11" else
