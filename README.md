@@ -24,51 +24,47 @@ https://github.com/user-attachments/assets/e22566fb-7704-4349-8af8-d9e90414078c
 
 ## Inputs and Outputs
 
+- Roulette.vhd (Top Level)
 INPUTS:
-
-- CLK100MHZ
-System clock (100 MHz)
-Used for timing and synchronization
-
-
-Button Inputs:
-
--BTN0:
-Starts single-bomb mode
-Used with all switches down to reset game
-
-
--BTNU:
-Starts multi-bomb mode
-Used with all switches down to reset game
-
-Switches (SW[15:0]):
--16 switches that players flip during gameplay
--Each switch can potentially hide a bomb
--Must all be flipped down to reset game
+CLK100MHZ - Main system clock operating at 100MHz
+SW[15:0]  - Array of 16 switches players use to make moves
+BTN0      - Button to start/reset single-player mode 
+BTNU      - Button to start/reset multiplayer mode
 
 OUTPUTS:
+SEGMENTS[7:0] - Controls the segments of each digit display (a-g + decimal point)
+AN[7:0]       - Controls which digit position is active (digit select)
+LED[1:0]      - Status indicators (01=safe move, 10=bomb hit)
 
--LED[1:0] (2 LEDs):
+- my_fsm.vhd (Game Controller)
+INPUTS:
+SWITCHES[15:0] - Input from board switches for gameplay
+BTN0, BTNU     - Input buttons for mode selection/reset
+CLK            - System clock input
 
-"00": Default/Off state
+OUTPUTS:
+Z              - Indicates game over state (0=playing, 1=game over)
+START          - Indicates game start state (1=start screen)
+BOMB_LOCATION  - Current bomb position for single player mode
+CURRENT_PLAYER - Tracks current player's turn (0=player1, 1=player2)
+LED_STATE      - Controls LED display patterns (01=safe, 10=bomb hit)
 
-"01": Green - Safe move 
+- BC_DEC.vhd (Display Controller)
+INPUTS:
+CLK     - System clock input for timing
+Z       - Game over state indicator from FSM
+START   - Game start state indicator from FSM
 
-"10": Red - Bomb hit
+OUTPUTS:
+DISP_EN[7:0]   - Controls which display digits are active (digit multiplexing)
+SEGMENTS[7:0]   - Controls segment patterns for displaying "PLAY" or "LOSE"
 
-Flashing "10": Game Over
+- clk_div.vhd (Clock Divider)
+INPUTS:
+clk     - Input clock that needs to be divided
 
-
-Seven-Segment Display:
-
--SEGMENTS[7:0]: Controls individual segments
--AN[7:0]: Controls which digit is active
-Displays:
-
--"PLAY" during active game
--"LOSE" when game is over
-Blank during startup/reset
+OUTPUTS:
+sclk    - Slowed clock output for display refresh timing
 
 ### Our Additions
 
