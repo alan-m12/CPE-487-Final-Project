@@ -11,20 +11,21 @@ entity clk_div is
 end clk_div;
 
 architecture my_clk_div of clk_div is
-   constant max_count : integer := (1100);  
-   signal tmp_clk : std_logic := '0'; 
+    constant max_count : integer := (1100);    
+    signal tmp_clk : std_logic := '0';
 begin
-   my_div: process (clk,tmp_clk)              
-      variable div_cnt : integer := 0;   
-   begin
-      if (rising_edge(clk)) then   
-         if (div_cnt = MAX_COUNT) then 
-            tmp_clk <= not tmp_clk; 
-            div_cnt := 0; 
-         else
-            div_cnt := div_cnt + 1; 
-         end if; 
-      end if; 
-      sclk <= tmp_clk; 
-   end process my_div; 
+    my_div: process (clk)
+        variable div_cnt : integer := 0;
+    begin
+        if (rising_edge(clk)) then
+            if (div_cnt = MAX_COUNT) then
+                tmp_clk <= not tmp_clk;
+                div_cnt := 0;
+            else
+                div_cnt := div_cnt + 1;
+            end if;
+        end if;
+    end process my_div;
+    
+    sclk <= tmp_clk;
 end my_clk_div;
